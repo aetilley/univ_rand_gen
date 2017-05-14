@@ -20,7 +20,7 @@ The class UnivRandGen provides a random number generator with distribution deter
 
     plt.show()
 
-![](./exp_dist.png)
+![](.images/exp_dist.png)
 
 ##Example: Generating data according to a Gaussian distribution
 
@@ -42,7 +42,7 @@ The class UnivRandGen provides a random number generator with distribution deter
 
     plt.show()
 
-![](./normal_dist.png)
+![](.images/normal_dist.png)
 
 ## Example: Generating radii to generate points uniformly in an annulus
 
@@ -69,5 +69,5 @@ We desire the density p of the radius to be `p(r) = 2r/(rad_max**2 - rad_min**2)
 
     plt.show()
 
-![](./uniform_annulus.png)
+![](.images/uniform_annulus.png)
 
