@@ -24,7 +24,7 @@
 ## Example: Generating radii to generate points uniformly in an annulus
 
 
-We desire the density p of the radius to be p(r) = 2r/(rad_max**2 - rad_min**2) so the cdf should be F(r) = (r**2 - rad_min**2) / (rad_max**2 - rad_min**2)
+We desire the density p of the radius to be `p(r) = 2r/(rad_max**2 - rad_min**2)` so the cdf should be `F(r) = (r**2 - rad_min**2) / (rad_max**2 - rad_min**2)`
 
     import numpy as np
     from univ_rand_gen import UnivRandGen
