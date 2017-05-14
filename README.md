@@ -1,1 +1,1 @@
-# A  Universal Random Number Gernerator
+# A  Universal Random Number Generator
