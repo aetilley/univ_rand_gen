@@ -10,17 +10,17 @@ def uniform_annulus(rad_min, rad_max, num_points):
 
     theta = 2*np.pi*np.random.random((num_points,))
 
-    def cdf(r):
+In [1]: from univ_rand_gen import UnivRandGen
 
-        if r < rad_min:
-            return 0
+In [2]: cdf = lambda x: 1 - np.exp(-x)
 
-        elif r > rad_max:
-            return 1
+In [3]: gen = UnivRandGen(func=cdf, type = 'cdf')
 
-        else:
-            return (r**2 - rad_min**2) / (rad_max**2 - rad_min**2)
+In [4]: import numpy as np
 
+In [5]: from matplotlib import pyplot as plt
+
+In [6]: data = [gen.random(
 
     rad_gen = UnivRandGen(func = cdf, type = 'cdf')
 
