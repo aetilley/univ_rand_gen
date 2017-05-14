@@ -12,7 +12,7 @@ The class UnivRandGen provides a random number generator with distribution deter
     MEAN = 1.
     cdf = lambda x: 1 - np.exp(-(1./MEAN)*x)
 
-    gen = UnivRandGen(func=cdf, type = 'cdf')
+    gen = UnivRandGen(func=cdf, type = 'cdf', seed = 0)
 
     data = [gen.random() for _ in range(NUM_POINTS)]
 
