@@ -8,13 +8,11 @@ The class UnivRandGen provides a random number generator with distribution deter
     from univ_rand_gen import UnivRandGen
     from matplotlib import pyplot as plt
 
-    NUM_POINTS = 100000
-    MEAN = 1.
-    cdf = lambda x: 1 - np.exp(-(1./MEAN)*x)
+    cdf = lambda x: 1 - np.exp(-x)
 
     gen = UnivRandGen(func=cdf, type = 'cdf')
 
-    data = [gen.random() for _ in range(NUM_POINTS)]
+    data = [gen.random() for _ in range(100000)]
 
     plt.hist(data, bins = 100)
 
@@ -29,14 +27,13 @@ The class UnivRandGen provides a random number generator with distribution deter
     from matplotlib import pyplot as plt
     from math import erf
 
-    NUM_POINTS = 100000
     MEAN = 1.
     STD = 2.
     cdf = lambda x: (.5)*(1 + erf((x - MEAN) / (STD*np.sqrt(2))))   
 
     gen = UnivRandGen(func=cdf, type = 'cdf')
 
-    data = [gen.random() for _ in range(NUM_POINTS)]
+    data = [gen.random() for _ in range(100000)]
 
     plt.hist(data, bins = 100)
 
@@ -45,6 +42,7 @@ The class UnivRandGen provides a random number generator with distribution deter
 ![](./normal_dist.png)
 
 ## Example: Generating radii to generate points uniformly in an annulus
+
 
 We desire the density p of the radius to be `p(r) = 2r/(rad_max**2 - rad_min**2)` so the cdf should be `F(r) = (r**2 - rad_min**2) / (rad_max**2 - rad_min**2)`
 
