@@ -22,7 +22,7 @@ The class UnivRandGen provides a random number generator with distribution deter
 
 ![](.images/exp_dist.png)
 
-##Example: Generating data according to a Gaussian distribution
+## Example: Generating data according to a Gaussian distribution
 
     import numpy as np
     from univ_rand_gen import UnivRandGen
