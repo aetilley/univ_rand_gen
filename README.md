@@ -44,7 +44,7 @@ The class UnivRandGen provides a random number generator with distribution deter
 
 ![](./images/normal_dist.png)
 
-## Example: Generating radii to generate points uniformly in an annulus
+## Example: Generating radii to generate points uniformly in an annulus (without rejection sampling)
 
 We desire the density p of the radius to be `p(r) = 2r/(rad_max**2 - rad_min**2)` so the cdf should be `F(r) = (r**2 - rad_min**2) / (rad_max**2 - rad_min**2)`
 
